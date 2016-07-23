@@ -66,7 +66,15 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    ATMA
+                    
+                    <?php
+                        //include ('database_connection.php');
+                        include '../registrations/database_connection.php';
+                        session_start();
+
+                        $username = $_SESSION['Username'];
+                        echo $username;
+                    ?>
                 </a>
             </div>
 
@@ -371,7 +379,7 @@
 
         	$.notify({
             	icon: 'pe-7s-gift',
-            	message: "Welcome to your personalized Dashboard, helping you track your project progress."
+            	message: "Welcome to your personalized dashboard!"
 
             },{
                 type: 'info',
