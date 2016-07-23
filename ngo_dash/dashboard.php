@@ -66,15 +66,7 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    
-                    <?php
-                        //include ('database_connection.php');
-                        include '../registrations/database_connection.php';
-                        session_start();
-
-                        $username = $_SESSION['Username'];
-                        echo $username;
-                    ?>
+                    ATMA
                 </a>
             </div>
 
@@ -87,17 +79,20 @@
                 </li>
                 <li>
                     <a href="user.html">
-                        <i class="pe-7s-user"></i>
-                        <p>Profile</p>
+                        <i class="pe-7s-note2"></i>
+                        <p>Feedback</p>
                     </a>
                 </li>
+                
+                <!--
                 <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>Leaderboard</p>
                     </a>
                 </li>
-               <!-- <li>
+                
+                <li>
                     <a href="typography.html">
                         <i class="pe-7s-news-paper"></i>
                         <p>Typography</p>
@@ -108,14 +103,13 @@
                         <i class="pe-7s-science"></i>
                         <p>Icons</p>
                     </a>
-                </li>-->
                 <li> 
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
                         <p>Maps</p>
                     </a>
                 </li>
-             <!--   <li>
+                <li>
                     <a href="notifications.html">
                         <i class="pe-7s-bell"></i>
                         <p>Notifications</p>
@@ -147,7 +141,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/team-2/index.php">
+                            <a href="#">
                                 Log out
                             </a>
                         </li>
@@ -158,21 +152,6 @@
 
 
         <div class="content">
-<<<<<<< HEAD
-            <div class="container-fluid">
-           
-
-                    
-                </div>
-
-
-
-                <div class="row">
-                    
-
-                    <div class="col-md-6">
-                        
-=======
             <div class="container-fluid">        
                 <div class="row">
                     <div class="col-md-6">
@@ -316,7 +295,6 @@
                                 </div>
                             </div>
                         </div>
->>>>>>> a66821963bbd6d29b7699c76407ee169ce693b03
                     </div>
                    
                    
@@ -329,14 +307,32 @@
 
         <footer class="footer">
             <div class="container-fluid">
-          
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               Blog
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <p class="copyright pull-right">
-<<<<<<< HEAD
-                    &copy; 2016 <a href="http://www.creative-tim.com">Atma</a>
-                </p>
-=======
                     &copy; 2016 <a href="http://www.atma.org.in">Atma</a> contact@atma.org.in</p>
->>>>>>> a66821963bbd6d29b7699c76407ee169ce693b03
             </div>
         </footer>
 
@@ -377,7 +373,7 @@
 
         	$.notify({
             	icon: 'pe-7s-gift',
-            	message: "Welcome to your personalized dashboard!"
+            	message: "Welcome to your personalized Dashboard, helping you track your project progress."
 
             },{
                 type: 'info',
