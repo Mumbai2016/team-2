@@ -54,19 +54,19 @@
                 <li class="active">
                     <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <p>SP of organization</p>
                     </a>
                 </li>
                 <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>
-                        <p>Profile</p>
+                        <p>Volunteer Life Cycle</p>
                     </a>
                 </li>
                 <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
-                        <p>Leaderboard</p>
+                        <p>Feedback</p>
                     </a>
                 </li>
                <!-- <li>
@@ -80,13 +80,13 @@
                         <i class="pe-7s-science"></i>
                         <p>Icons</p>
                     </a>
-                </li>-->
+                </li>
                 <li> 
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
                         <p>Maps</p>
                     </a>
-                </li>
+                </li>-->
              <!--   <li>
                     <a href="notifications.html">
                         <i class="pe-7s-bell"></i>
@@ -97,7 +97,7 @@
             </ul>
     	</div>
     </div>
-
+<!--
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -132,7 +132,7 @@
                                 <li class="divider"></li>
                                 <li><a href="#">Separated link</a></li>
                               </ul>
-                        </li> -->
+                        </li> 
                         <li>
                             <a href="#">
                                 Log out
@@ -345,8 +345,8 @@
             </div>
         </div>
 
-
-        <footer class="footer">
+-->
+      <!--  <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
@@ -377,7 +377,7 @@
                 </p>
             </div>
         </footer>
-
+-->
     </div>
 </div>
 
