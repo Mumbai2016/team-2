@@ -20,6 +20,24 @@
           box-shadow: -1px 1px 3px #000;
      } 
 </style>
+<?php
+session_start();
+include ('../registrations/database_connection.php');
+$dbc = new mysqli('localhost', 'root', '', 'atma');
+$username = $_SESSION['Username'];
+echo "username";
+echo $username;
+
+$query_id = "SELECT email FROM volunteers WHERE username = $username";
+$result_id = mysqli_query($dbc, $query_id);
+echo "result id";
+echo "before";
+echo $result_id;
+echo "after";
+
+
+?>
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
@@ -102,9 +120,9 @@
             <div class="logo">
                 <a href="#" class="simple-text">
                     <?php
-                        session_start();
+                        
                         //include ('..\database_connection.php');
-                        $username = $_SESSION['Username'];
+                        
                         echo $username;
                     ?>
                 </a>
