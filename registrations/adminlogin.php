@@ -12,7 +12,7 @@ session_start();
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Cachebuffer</title>
+    <title>atma</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -21,20 +21,10 @@ session_start();
     <![endif]-->
     <link href="../css/styles.css" rel="stylesheet">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+ 
 
   </head>
   <body>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 
 
 
@@ -53,7 +43,7 @@ error_reporting(0);
     include ('database_connection.php');
 
 
-$dbc = new mysqli('localhost', 'u414877475_cache', 'jaikumari@9821', 'u414877475_cache');
+$dbc = new mysqli('localhost', 'root', '', 'atma');
 
 
 
@@ -96,30 +86,10 @@ $dbc = new mysqli('localhost', 'u414877475_cache', 'jaikumari@9821', 'u414877475
 
 
 
-if(isset($_POST['g-recaptcha-response'])){
-          $captcha=$_POST['g-recaptcha-response'];
-        }
-
-
-        if(!$captcha){
-          echo '<h2>Please check the the captcha form.</h2>';
-          exit;
-        }
 
 
 
- $secretKey = "6Lcagh4TAAAAAFnctTPFr7Et70UWbyornGsVL13t";
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
-        $responseKeys = json_decode($response,true);
-        if(intval($responseKeys["success"]) !== 1) {
-          echo '<h2>You are spammer ! Get the @$%K out</h2>';
-        } 
-
-
-
-
-        $query_check_credentials = "SELECT * FROM admin WHERE (Email='$Email' AND password='$Password') AND Activation IS NULL";
+        $query_check_credentials = "SELECT * FROM reg_users WHERE (Email='$Email' AND password='$Password') AND Activation IS NULL";
 
         
 
@@ -136,11 +106,7 @@ if(isset($_POST['g-recaptcha-response'])){
 
             $_SESSION = mysqli_fetch_array($result_check_credentials, MYSQLI_ASSOC);//Assign the result of this query to SESSION Global Variable
 
-            echo ("<SCRIPT LANGUAGE='JavaScript'>
-    window.alert('Admin')
-    window.location.href='../Users/adminhome.php';
-    </SCRIPT>");
-                 
+            header("Location:../dash/atmadash.php");
 
 
           }else
@@ -211,7 +177,7 @@ if(isset($_POST['g-recaptcha-response'])){
                
                   <ul class="list-unstyled hidden-xs" id="sidebar-header">
                     <li>
-                      <h3>Cachebuffer</h3>
+                      <h3>atma</h3>
                     </li>
                 </ul>
 
@@ -228,24 +194,9 @@ if(isset($_POST['g-recaptcha-response'])){
 
 
 
-                <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="#featured">Tech News</a></li>
-                    <li><a href="#">Algorithms</a></li>
-                    <li><a href="#">Most Viewed</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-              
-              
 </br></br></br></br></br>
-<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; top:250px;">
-    <a href="https://www.facebook.com/cachebuffer/" class="a2a_button_facebook"></a>
-    <a class="a2a_button_twitter"></a>
-    <a class="a2a_button_google_plus"></a>
-    <a class="a2a_button_pinterest"></a>
-   <!-- <a class="a2a_dd" href="https://www.addtoany.com/share"></a>-->
-</div>
 
-<script async src="//static.addtoany.com/menu/page.js"></script>
+
 
 
 
@@ -278,18 +229,7 @@ if(isset($_POST['g-recaptcha-response'])){
                       </li>
                    
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                          <li><a href="">More</a></li>
-                        </ul>
-                      </li>
-                    </ul>
+    
                     </nav>
                 </div>
                 <!-- /top nav -->
@@ -309,8 +249,6 @@ if(isset($_POST['g-recaptcha-response'])){
                                 <div class="panel-body">
 
 
-
-<div class="fb-page" data-href="https://www.facebook.com/cachebuffer/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/cachebuffer/"><a href="https://www.facebook.com/cachebuffer/">CacheBuffer</a></blockquote></div></div>
 
                                 
                                 </div>
@@ -334,7 +272,7 @@ if(isset($_POST['g-recaptcha-response'])){
 
 
 
-<center><p><b><h2>Admin Login</h2></b></p></center>
+<center><p><b><h2>Login</h2></b></p></center>
 
  <form action="adminlogin.php" method="post" class="form-horizontal">
       <fieldset>
@@ -357,23 +295,13 @@ if(isset($_POST['g-recaptcha-response'])){
               </div>
 
 
-</br>
-                                     <center> 
-                                        <div class="g-recaptcha" 
-                                              data-theme="light" 
-                                               data-sitekey="6Lcagh4TAAAAALgGBcwrus_101e2S7ayzC1dSvpt" 
-                                               style="transform:scale(0.77);transform-origin:0 0">
-                                        </div> </center>
-
-                                    </br>
-
 
 
             </div>
           </div>
           <center>
             <br>
-            <button style="background-color: #3bafda;color: #ffffff;text-decoration: none;"  type="reset" class="btn primary"><span class="glyphicon glyphicon-refresh"></span>&nbspReset</button>&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp
             <input type="hidden" name="formsubmitted" value="TRUE" />
             <button  style="background-color: #ff4d4d;color: #ffffff;text-decoration: none;"  type="submit" class="btn primary"><span class="glyphicon glyphicon-log-in"></span>&nbsp&nbspLogin</button></center>
             <br>
@@ -382,6 +310,7 @@ if(isset($_POST['g-recaptcha-response'])){
         </div>
       </fieldset>
     </form>
+  
 
 
 
@@ -418,7 +347,7 @@ if(isset($_POST['g-recaptcha-response'])){
                       <hr>
                       
                       <h4 class="text-center">
-                      <a href="http://www.cachebuffer.com" target="ext">Cachebuffer</a>
+                      <a href="http://www.atma.com" target="ext">atma</a>
                       </h4>
                         
                       <hr>

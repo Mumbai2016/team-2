@@ -168,8 +168,8 @@ $("#result").click(function(e){
 
 
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="#featured">.....</a></li>
-                    <li><a href="#stories">.....</a></li>
+                    <li class="active"><a href="registrations/adminlogin.php">Admin</a></li>
+                    <li><a href="registrations/ngologin.php">NGO login</a></li>
                     <li><a href="#">.....</a></li>
                     <li><a href="#">.....</a></li>
                 </ul>
