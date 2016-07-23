@@ -1,0 +1,65 @@
+
+body { text-align: center; margin: 0%; padding: 0%; color: #cdcbd6; font-family:'Open Sans', sans-serif; font-size:10pt; background-repeat:no-repeat; background-color: white;position:relative;}
+
+.hicon a { text-decoration: none;  background-color: transparent; border: solid 1px #E5E4EB; float:right; width: 200px; height: 15%; font-size: 1em; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-top:10px;background-color:#D7E3FA}
+
+.hicon a:link, .hicon:visited { color: #4F428B;}
+.hicon a:hover { text-decoration: none; margin-top: -1px; -webkit-box-shadow: 0px 0px 1px #9B9AA1; -moz-box-shadow: 0px 0px 1px #9B9AA1; box-shadow: 0px 0px 1px #9B9AA1;}
+.hicon a:active { position: relative; top: 1px; color: #4F428B; -webkit-box-shadow: inset 0px 0px 2px #4F428B; -moz-box-shadow: inset 0px 0px 2px #4F428B; box-shadow: inset 0px 0px 2px #4F428B;}
+
+#music{
+position:absolute;
+left: 2%;
+top: 0%;
+
+}
+#geography{
+position: absolute;
+left: 25%;
+top: 0%;
+padding-left:10%;
+}
+
+#science{
+position: absolute;
+left: 48%;
+top: 0%;
+padding-left:20%;
+}
+#history{
+position: absolute;
+left: 2%;
+top: 30%;
+
+}
+
+#computer{
+position: absolute;
+left: 25%;
+top: 30%;
+padding-left:10%;
+}
+
+#literature{
+position: absolute;
+left: 48%;
+top: 30%;
+padding-left:20%;
+}
+h1{
+margin-top:5px;
+}
+.quiz{
+  
+    background-color:red;
+    max-width:70%;
+	padding-bottom: 100%;
+margin-bottom: 25%;
+border-bottom: 2px ridge #FFF;
+float:left;
+    }
+
+div
+{	
+	display:block;
+}
