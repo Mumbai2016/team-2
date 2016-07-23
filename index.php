@@ -258,7 +258,33 @@ $("#result").click(function(e){
                               </div>
 
                            
-                             
+                             <br>
+							 <br>
+							 <div>
+						<p>	<h3><b> Mission: </b></h3></p>
+
+<p>Atma is an accelerator for education and their mission is to build the capacity of education NGOs to achieve sustainability and scalability, thereby enabling delivery of quality education for all children.
+</p>
+					<p>	<h3><b> Context: </b></h3></p>
+<p>
+Atma runs an Accelerator Program that partners with many NGOs in India. Atma believes that NGO leaders have the vision and passion to achieve their mission, but there is only so much the NGOs can do on their own. The Atma Accelerator Program supports and consults with different education NGOs in Mumbai by providing management expertise. This helps the NGOs become bigger, better, stronger, and to expand their reach and impact in a sustainable way.
+
+In the Accelerator Program, Atma dedicates 1200 hours to each of their NGO partners to help with their development and growth. Atma also provides each education NGO with 3 highly skilled volunteers and 1 Partner Manager responsible for helping the NGOs with their development and implementation plans. NGOs selected for the Accelerator Program receive three years of consultancy support in 10 Organizational Development areas such as Administration, Finance, Fundraising, Monitoring & Evaluation, Human Resources, Governance, Leadership, Strategy, Development, Programs and Marketing. Ultimately, Atma helps education NGOs design and implement projects in these areas with the help of skilled associates. They also conduct trainings and workshops to enhance operational capabilities in various areas like Financial Management. The NGOs that are a part of the Accelerator Program have access to resources, peers, funders and experts that can expand their impact and allow them to achieve their mission more effectively.
+</p>
+
+<b><h3><p>Challenge Statement:</b></h3></p>
+<p>
+Atma’s Volunteers and Partner Manager collaborate with NGOs for implementing business development plans. Your challenge is to develop a gamified platform for Atma’s volunteers and Partner Manager to effectively collaborate with NGOs around the implementation of their business development plan.
+</p>
+
+<b><h3><p>Gamification: </b></h3>How could gamification incentivize involved players (Partner Managers, Volunteers & NGOs) to leverage the platform and report on their development plan’s progress and growth? The platform should capture the project’s goals, important milestones, and roles and responsibilities of involved players. Volunteers, Partner Managers, and NGOs could earn badges as they reach milestones individually (or against another group) in the Accelerator Program.
+Tracker: The Partner Manager should be able to breakdown the development plan into a step by step action plan and should be able to assign tasks and deadlines to volunteers and NGOs, send reminders to complete the tasks, and track the action plan.
+Dashboard: Atma should be able to access a dashboard for generating reports of project statuses.
+<b><h3><p>Technology Baseline:</b></h3>
+
+Atma currently uses Google Spreadsheets and email for the communication with stakeholders involved
+Atma does not have dedicated technology staff
+							 </div>
                            
                              
                            
