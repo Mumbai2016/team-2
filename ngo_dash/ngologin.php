@@ -98,7 +98,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Table List</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     
@@ -240,8 +239,7 @@
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+                    &copy; 2016 <a href="http://www.atma.org.in">Atma</a> </p>
             </div>
         </footer>
 
