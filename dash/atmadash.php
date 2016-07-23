@@ -146,69 +146,6 @@ ul {
 
 
 
-<?php 
-include('navbar.php');
-
-?>
-<br> 
-<h2><a href="logout.php">logout</a></h2>
-<div style="padding:50px!important">
-
-<h3>Images for Slider</h3>
-<a href="home_new_images.php">Add a new Image</a>
-<br>
-<br>
-<table>
-  <tr>
-<th width="10%">Image</th>   
-<th width="70%">Name</th>
-
-
-
-<th width="10%">Change</th>
-
-<th width="10%">Delete</th>
-</tr>
-<?php
-include('conn.php'); 
-$query1="SELECT * FROM home_images where type='slider'";
-$result=mysql_query($query1);
-while ($rows=mysql_fetch_array($result))
-{
-    $imagename =    $rows['name'];
-    ?>
-<td>
-  <img width="100" height="100" src="images/<?php echo $imagename ?>" />
- </td>
- <td> <?php echo $rows['name']?> </td>
-<td> <a href="javascript:update_id(<?php echo $rows['id'];?>)"><input type="button" value="Update" class="btn btn-danger" width="100%"></a> </td>
-
-<td> <a href="javascript:delete_id(<?php echo $rows['id'];?>)"><input type="button" value="Delete" class="btn btn-danger" width="100%"></a> </td>
-
-<script>
-function delete_id(id)
-{
-     if(confirm('Sure To Remove This Record ?'))
-     {
-        window.location.href='home_delete_image.php?delete_id='+id;
-     }
-}
-function update_id(id)
-{
-     
-        window.location.href='home_update_image_form.php?update_id='+id;
-     
-}
-</script>
-
-  </tr>
-
-<?php }  ?>
-
-  
-</table>
-</div>
-
 
 
 
