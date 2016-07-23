@@ -378,6 +378,22 @@ CREATE TABLE `volunteer-workhours` (
  UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
+CREATE TABLE `volunteers` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `username` varchar(200) NOT NULL,
+ `email` varchar(200) NOT NULL,
+ `firstname` varchar(200) NOT NULL,
+ `lastname` varchar(200) NOT NULL,
+ `address` varchar(200) NOT NULL,
+ `city` varchar(20) NOT NULL,
+ `country` varchar(20) NOT NULL,
+ `postalcode` int(11) NOT NULL,
+ `workexp` int(11) NOT NULL,
+ `mobileno` varchar(200) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

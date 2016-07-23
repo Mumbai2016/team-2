@@ -139,7 +139,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/team-2/index.php">
                                 Log out
                             </a>
                         </li>
