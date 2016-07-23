@@ -23,7 +23,7 @@
 <?php
 session_start();
 include ('../registrations/database_connection.php');
-$dbc = new mysqli('localhost', 'root', '', 'atma');
+$dbc = new mysqli('localhost', 'root', 'root', 'atma');
 $username = $_SESSION['Username'];
 echo "username";
 echo $username;
