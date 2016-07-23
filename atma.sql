@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2016 at 02:10 PM
+-- Generation Time: Jul 23, 2016 at 04:15 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -240,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `reg_users` (
 
 INSERT INTO `reg_users` (`Memberid`, `Username`, `Email`, `Mob`, `Password`, `Activation`) VALUES
 (1, 'Deepak123', 'deodaardeepak@gmail.com', '9898989898', 'd8578edf8458ce06fbc5bb76a58c5ca4', NULL),
-(2, 'Deepak123', 'deodaardeepak@gmail.com', '9898989898', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'cf0405c3e48f06e24d1cb9cbd0356dfc');
+(2, 'Admin', 'admin@atma.com', '9898989898', 'd8578edf8458ce06fbc5bb76a58c5ca4', NULL);
 
 -- --------------------------------------------------------
 
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `position`) VALUES
-(1, 'admin', 'admin', 'front desk');
+(1, 'admin@atma.com', 'admin', 'front desk');
 
 -- --------------------------------------------------------
 
@@ -368,6 +368,16 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 ALTER TABLE `keyactivities`
 ADD CONSTRAINT `keyactivities_ibfk_1` FOREIGN KEY (`keyid`) REFERENCES `project` (`id`);
+
+CREATE TABLE `volunteer-workhours` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `keyact_no` int(11) NOT NULL,
+ `work-hours` int(11) NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
