@@ -239,29 +239,6 @@ $("#result").click(function(e){
 
 
 
-       
-                <div class="padding">
-                    <div class="full col-sm-9">
-                      
-                        <!-- content -->                      
-                        <div class="row">
-                          
-                         <!-- main col left --> 
-                         <div class="col-sm-5">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -274,8 +251,7 @@ $("#result").click(function(e){
                                 <div class="panel-body">
 
 
-
-                                
+                  
                                 </div>
                               </div>
 
@@ -288,18 +264,7 @@ $("#result").click(function(e){
                               
                            
                           </div>
-
-
-
-
-
-                           
-                             
-                           
-
-                              
-                           
-                          </div>
+                          
                           
                           <!-- main col right -->
                           <div class="col-sm-7">
