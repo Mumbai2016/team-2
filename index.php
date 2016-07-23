@@ -11,6 +11,16 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+		<style>
+		.image:hover {
+border-radius:50%;
+box-shadow: 0 10px 6px -6px grey;
+}
+.image {
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+</style>
 
     
     
@@ -227,6 +237,7 @@ $("#result").click(function(e){
                           
                          <!-- main col left --> 
                          <div class="col-sm-4">
+						 
                               <img src="image/logo.png" style="float:left">
                          </div>
 						 &nbsp;
