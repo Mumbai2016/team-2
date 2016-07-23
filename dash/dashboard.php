@@ -39,15 +39,12 @@
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+          ['Complete', 3],
+          ['Remaining', 1],
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
+        var options = {'title':'Completion of your Project',
                        'width':400,
                        'height':300};
 
@@ -108,15 +105,21 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="#">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
+
+                    <a href="user.php">
+                        <i class="pe-7s-user"></i>
+                        <p>Profile</p>
+
                     <a href="user.html">
                         <i class="pe-7s-note2"></i>
                         <p>Feedback</p>
+
                     </a>
                 </li>
                 
@@ -200,10 +203,10 @@
                                  <div id="chart_div"></div>
 
                                 <div class="footer">
-                                    <div class="legend">
+                                <!--    <div class="legend">
                                         <i class="fa fa-circle text-info"></i>Planned
                                         <i class="fa fa-circle text-danger"></i>Achieved
-                                    </div>
+                                    </div> -->
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-check"></i> Data information certified
