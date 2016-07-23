@@ -239,7 +239,55 @@ $("#result").click(function(e){
 
 
 
+       
+                <div class="padding">
+                    <div class="full col-sm-9">
+                      
+                        <!-- content -->                      
+                        <div class="row">
+                          
+                         <!-- main col left --> 
+                         <div class="col-sm-5">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           
+                              <div class="panel panel-default">
+                                <div class="panel-thumbnail"></div>
+                                <div class="panel-body">
+
+
+
+                                
+                                </div>
+                              </div>
+
+                           
+                             
+                           
+                             
+                           
+
+                              
+                           
+                          </div>
 
 
 
