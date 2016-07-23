@@ -30,6 +30,46 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+
+<style>
+table { 
+padding: 80px;
+color: #333; /* Lighten up font color */
+font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+width: 100%; 
+border-collapse: 
+collapse; border-spacing: 0; 
+text-align: center;
+}
+
+td, th { border: 1px solid #CCC; height: 30px;text-align: center; } /* Make cells a bit taller */
+
+th {
+    text-align: center!important;
+background: #F3F3F3; /* Light grey background */
+font-weight: bold; /* Make sure they're bold */
+}
+
+td {
+background: #FAFAFA; /* Lighter grey background */
+text-align: center; /* Center our text */
+}
+
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+</style>
+
+
+
 </head>
 <body>
 
@@ -97,6 +137,87 @@
             </ul>
     	</div>
     </div>
+
+
+
+
+
+
+
+
+
+<?php 
+include('navbar.php');
+
+?>
+<br> 
+<h2><a href="logout.php">logout</a></h2>
+<div style="padding:50px!important">
+
+<h3>Images for Slider</h3>
+<a href="home_new_images.php">Add a new Image</a>
+<br>
+<br>
+<table>
+  <tr>
+<th width="10%">Image</th>   
+<th width="70%">Name</th>
+
+
+
+<th width="10%">Change</th>
+
+<th width="10%">Delete</th>
+</tr>
+<?php
+include('conn.php'); 
+$query1="SELECT * FROM home_images where type='slider'";
+$result=mysql_query($query1);
+while ($rows=mysql_fetch_array($result))
+{
+    $imagename =    $rows['name'];
+    ?>
+<td>
+  <img width="100" height="100" src="images/<?php echo $imagename ?>" />
+ </td>
+ <td> <?php echo $rows['name']?> </td>
+<td> <a href="javascript:update_id(<?php echo $rows['id'];?>)"><input type="button" value="Update" class="btn btn-danger" width="100%"></a> </td>
+
+<td> <a href="javascript:delete_id(<?php echo $rows['id'];?>)"><input type="button" value="Delete" class="btn btn-danger" width="100%"></a> </td>
+
+<script>
+function delete_id(id)
+{
+     if(confirm('Sure To Remove This Record ?'))
+     {
+        window.location.href='home_delete_image.php?delete_id='+id;
+     }
+}
+function update_id(id)
+{
+     
+        window.location.href='home_update_image_form.php?update_id='+id;
+     
+}
+</script>
+
+  </tr>
+
+<?php }  ?>
+
+  
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
 <!--
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
@@ -413,7 +534,7 @@
 
         	$.notify({
             	icon: 'pe-7s-gift',
-            	message: "Welcome to your personalized Dashboard, helping you track your project progress."
+            	message: "Welcome to your personalized Atma Dashboard, helping you track your project progress."
 
             },{
                 type: 'info',

@@ -246,12 +246,25 @@ $("#result").click(function(e){
 
 
                            
+                              <div class="panel panel-default">
+                                <div class="panel-thumbnail"></div>
+                                <div class="panel-body">
+
+
+                  
+                                </div>
+                              </div>
+
+                           
+                             
+                           
                              
                            
 
                               
                            
                           </div>
+                          
                           
                           <!-- main col right -->
                           <div class="col-sm-7">
