@@ -53,7 +53,7 @@
             <ul class="nav">
                   <li class="active">
                     <a href="dashboard.html">
-                        <i class="pe-7s-graph"></i>
+                        <i class="pe-7s-graph"></i> 
                         <p>Project Analysis</p>
                     </a>
                 </li>
@@ -120,7 +120,7 @@
 
 
 
->>>>>>> a66821963bbd6d29b7699c76407ee169ce693b03
+>>>>>>> 
 
 
 
