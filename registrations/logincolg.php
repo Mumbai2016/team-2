@@ -44,7 +44,7 @@ error_reporting(0);
     include ('database_connection.php');
 
 
-$dbc = new mysqli('localhost', 'root', '', 'atma');
+$dbc = new mysqli('localhost', 'root', 'root', 'atma');
 
 
 

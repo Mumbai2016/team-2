@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','atma') or die(mysql_error());
+$conn = mysqli_connect('localhost','root','root','atma') or die(mysql_error());
 $database = mysqli_select_db($conn,'atma') or die(mysql_error());
 
 

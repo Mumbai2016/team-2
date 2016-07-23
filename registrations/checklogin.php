@@ -6,8 +6,8 @@ error_reporting(0);
     include ('database_connection.php');
 
 
-$dbc = new mysqli('localhost', 'u414877475_cache', 'jaikumari@9821', 'u414877475_cache');
-// Check connect
+$dbc = new mysqli('localhost', 'root', 'root', 'atma');
+// Check conn
 
 
     if (isset($_POST['formsubmitted'])) {
