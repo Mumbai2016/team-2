@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+
 ?>
 
 
@@ -87,7 +88,8 @@ $dbc = new mysqli('localhost', 'root', '', 'atma');
 
 
 
-
+        
+        $_SESSION1['username'] = $Email;
 
         $query_check_credentials = "SELECT * FROM reg_users WHERE (Email='$Email' AND password='$Password') AND Activation IS NULL";
 

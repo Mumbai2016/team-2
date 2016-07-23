@@ -30,46 +30,6 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
-
-<style>
-table { 
-padding: 80px;
-color: #333; /* Lighten up font color */
-font-family: Helvetica, Arial, sans-serif; /* Nicer font */
-width: 100%; 
-border-collapse: 
-collapse; border-spacing: 0; 
-text-align: center;
-}
-
-td, th { border: 1px solid #CCC; height: 30px;text-align: center; } /* Make cells a bit taller */
-
-th {
-    text-align: center!important;
-background: #F3F3F3; /* Light grey background */
-font-weight: bold; /* Make sure they're bold */
-}
-
-td {
-background: #FAFAFA; /* Lighter grey background */
-text-align: center; /* Center our text */
-}
-
-
-
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-</style>
-
-
-
 </head>
 <body>
 
@@ -91,7 +51,13 @@ ul {
             </div>
 
             <ul class="nav">
-                <li class="active">
+                  <li class="active">
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Project Analysis</p>
+                    </a>
+                </li>
+                <li>
                     <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>SP of organization</p>
@@ -146,12 +112,15 @@ ul {
 
 
 
+<<<<<<< HEAD
+=======
 
 
 
 
 
 
+>>>>>>> 
 
 
 
