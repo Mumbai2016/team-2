@@ -20,39 +20,6 @@
           box-shadow: -1px 1px 3px #000;
      } 
 </style>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Complete', 3],
-          ['Remaining', 1],
-        ]);
-
-        // Set chart options
-        var options = {'title':'Completion of your Project',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
 	<meta charset="utf-8" />
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -99,32 +66,21 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    <?php
-                        session_start();
-                        //include ('..\database_connection.php');
-                        $username = $_SESSION['Username'];
-                        echo $username;
-                    ?>
+                    ATMA
                 </a>
             </div>
 
             <ul class="nav">
                 <li class="active">
-                    <a href="#">
+                    <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-
-                    <a href="user.php">
-                        <i class="pe-7s-user"></i>
-                        <p>Profile</p>
-
                     <a href="user.html">
                         <i class="pe-7s-note2"></i>
                         <p>Feedback</p>
-
                     </a>
                 </li>
                 
@@ -205,13 +161,13 @@
                                 <p class="category">All projects under the model</p>
                             </div>
                             <div class="content">
-                                 <div id="chart_div"></div>
+                                <div id="chartActivity" class="ct-chart"></div>
 
                                 <div class="footer">
-                                <!--    <div class="legend">
+                                    <div class="legend">
                                         <i class="fa fa-circle text-info"></i>Planned
                                         <i class="fa fa-circle text-danger"></i>Achieved
-                                    </div> -->
+                                    </div>
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-check"></i> Data information certified
@@ -343,38 +299,7 @@
                    
                    
                 </div>
-
-
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2014 Sales</h4>
-                                <p class="category">All products including Taxes</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
-
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
-                   
-                    
-                </div>   
+  
                 </div>
             </div>
         </div>
