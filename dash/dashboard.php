@@ -36,11 +36,13 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
+        var complete = 3;
+        var remaining = 1;
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Complete', 3],
-          ['Remaining', 1],
+          ['Complete', complete],
+          ['Remaining', remaining],
         ]);
 
         // Set chart options

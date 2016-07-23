@@ -46,6 +46,7 @@
                         session_start();
 
                         $username = $_SESSION['Username'];
+                        $_SESSION['username'] = $username;
                         echo $username;
                     ?>
                 </a>
