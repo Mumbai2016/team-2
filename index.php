@@ -226,33 +226,25 @@ $("#result").click(function(e){
                         <div class="row">
                           
                          <!-- main col left --> 
-                         <div class="col-sm-5">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                           
-                              <div class="panel panel-default">
-                                <div class="panel-thumbnail"></div>
-                                <div class="panel-body">
-
-
-                  
+                         <div class="col-sm-4">
+                              <img src="atmalogo.png" style="float:left">
+                         </div>
+						 &nbsp;
+						 &nbsp;
+						 &nbsp;
+						 &nbsp;
+						 <div class="col-sm-5">
+						 <div class="well"> 
+                                   <form class="form">
+                                    <h4>Connect with Atma!!</h4>
+                                    <div class="input-group text-center">
+                                  
+                                    <a href="registrations/logincolg.php"><button class="btn btn-lg btn-primary" type="button">Login</button>&nbsp&nbsp
+                                       <a href="registrations/colgreg.php"><button class="btn btn-lg btn-primary" type="button">Signup</button></a>
+                                    </div>
+                                  </form>
                                 </div>
+</div>
                               </div>
 
                            
@@ -269,17 +261,7 @@ $("#result").click(function(e){
                           <!-- main col right -->
                           <div class="col-sm-7">
                                
-                                <div class="well"> 
-                                   <form class="form">
-                                    <h4>Connect with Atma!!</h4>
-                                    <div class="input-group text-center">
-                                  
-                                    <a href="registrations/logincolg.php"><button class="btn btn-lg btn-primary" type="button">Login</button>&nbsp&nbsp
-                                       <a href="registrations/colgreg.php"><button class="btn btn-lg btn-primary" type="button">Signup</button></a>
-                                    </div>
-                                  </form>
-                                </div>
-
+                          
 
 
 
