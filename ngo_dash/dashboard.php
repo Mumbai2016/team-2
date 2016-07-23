@@ -79,17 +79,19 @@
                 </li>
                 <li>
                     <a href="user.html">
-                        <i class="pe-7s-user"></i>
-                        <p>Profile</p>
+                        <i class="pe-7s-note2"></i>
+                        <p>Feedback</p>
                     </a>
                 </li>
                 
-                <!--  <li>
+                <!--
+                <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>Leaderboard</p>
                     </a>
                 </li>
+                
                 <li>
                     <a href="typography.html">
                         <i class="pe-7s-news-paper"></i>
