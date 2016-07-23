@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Atma - Volunteer Feedback</title>
+	<title>User Profile</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -41,31 +41,36 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    ATMA
+                    <?php
+                        include '../registrations/database_connection.php';
+                        session_start();
+
+                        $username = $_SESSION['Username'];
+                        echo $username;
+                    ?>
                 </a>
             </div>
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard.php">
+                    <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="user.html">
-                        <i class="pe-7s-note2"></i>
-                        <p>Feedback</p>
+                        <i class="pe-7s-user"></i>
+                        <p>Profile</p>
                     </a>
                 </li>
-                
-                <!--  <li>
+                <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>LeaderBoard</p>
                     </a>
                 </li>
-                <li>
+              <!--  <li>
                     <a href="typography.html">
                         <i class="pe-7s-news-paper"></i>
                         <p>Typography</p>
@@ -76,13 +81,13 @@
                         <i class="pe-7s-science"></i>
                         <p>Icons</p>
                     </a>
-                </li>
+                </li>-->
                 <li>
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
                         <p>Maps</p>
                     </a>
-                </li>-->
+                </li>
                 
     	</div>
     </div>
@@ -97,7 +102,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Volunteer Feedback</a>
+                    <a class="navbar-brand" href="#">Profile</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -114,7 +119,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/team-2/index.php">
                                 Log out
                             </a>
                         </li>
@@ -127,44 +132,40 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                            <!--   <h4 class="title">Edit Profile</h4>  -->
+                                <h4 class="title">Edit Profile</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form action="submitdetails.php" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                     <!--    <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Organisation working for</label>
                                                 <input type="text" class="form-control" placeholder="Company" value="Abc School">
                                             </div>
-                                        </div> 
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>Username</label>
-                                                <input type="text" class="form-control" placeholder="Username" value="Atma23">
-                                            </div>
-                                        </div>
+                                        </div> -->
+                                        
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" placeholder="Email">
+                                                <input type="email" name = "email"class="form-control" placeholder="Email">
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
 
+                                    <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Volunteer Name</label>
-                                                <input type="text" class="form-control" placeholder="Name" value="">
+                                                <label>First Name</label>
+                                                <input type="text" name = "fname" class="form-control" placeholder="Company" value="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Project Assigned</label>
-                                                <input type="text" class="form-control" placeholder="Project Name" value="">
+                                                <label>Last Name</label>
+                                                <input type="text" name = "lname" class="form-control" placeholder="Last Name" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -172,42 +173,41 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Feedback</label>
-                                                <textarea rows="5" class="form-control" placeholder="" value="" class="form-group">    
-                                                </textarea>
+                                                <label>Address</label>
+                                                <input type="text" name = "address"class="form-control" placeholder="Home Address" value="">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- <div class="row">
+                                    <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>City</label>
-                                                <input type="text" class="form-control" placeholder="City" value="">
+                                                <input type="text" name = "city" class="form-control" placeholder="City" value="">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Country</label>
-                                                <input type="text" class="form-control" placeholder="Country" value="">
+                                                <input type="text" name = "country" class="form-control" placeholder="Country" value="">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Postal Code</label>
-                                                <input type="number" class="form-control" placeholder="ZIP Code">
+                                                <input type="number" name = "postalcode" class="form-control" placeholder="ZIP Code">
                                             </div>
                                         </div>
 										<div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Mobile Number</label>
-                                                <input type="number" class="form-control" placeholder="10 digits">
+                                                <input type="number" name = "number" class="form-control" placeholder="10 digits">
                                             </div>
                                         </div>
 										<div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Work Experience</label>
-                                                <input type="number" class="form-control" placeholder="In Years">
+                                                <input type="number" name = "workex" class="form-control" placeholder="In Years">
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Skill Sets</label>
-                                                <form action="demo_form.asp" method="get"><br>
+                                                
   <input type="checkbox" name="skills" value="skills"> Administration<br>
   <input type="checkbox" name="skills" value="skills">Fundraising<br>
   <input type="checkbox" name="skills" value="skills">Monitoring & Evaluation<br>
@@ -227,20 +227,18 @@
   <input type="checkbox" name="skills" value="skills">Development<br>
   <input type="checkbox" name="skills" value="skills">Programs and Marketing<br>
   <input type="checkbox" name="skills" value="skills">Finance<br>
-  <input type="submit" value="Submit">
-</form>
 
                                             </div>
                                         </div>
                                     </div>
-                                    -->
-                                    <button type="submit" class="btn btn-info btn-fill pull-left">Submit Feedback</button>
-		                            <div class="clearfix"></div>
+
+                                    <button type="submit" name = "submit"class="btn btn-info btn-fill pull-left">Update Profile</button>
+									<button type="submit" class="btn btn-info btn-fill pull-right">Apply</button>
+                                    <div class="clearfix"></div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <!--
                     <div class="col-md-4">
                         <div class="card card-user">
                             <div class="image">
@@ -270,7 +268,7 @@
                             </div>
                         </div>
                     </div>
-                    -->
+
                 </div>
             </div>
         </div>
@@ -303,7 +301,8 @@
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016  <a href="http://www.atma.org.in">Atma</a> contact@atma.org.in</p>
+                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
             </div>
         </footer>
 

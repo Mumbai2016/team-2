@@ -99,7 +99,12 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    ATMA
+                    <?php
+                        session_start();
+                        //include ('..\database_connection.php');
+                        $username = $_SESSION['Username'];
+                        echo $username;
+                    ?>
                 </a>
             </div>
 
