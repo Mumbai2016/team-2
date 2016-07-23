@@ -125,8 +125,8 @@ $("#result").click(function(e){
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li class="active"><a href="registrations/adminlogin.php">Admin</a></li>
                     <li><a href="registrations/ngologin.php">NGO login</a></li>
-                    <li><a href="#">.....</a></li>
-                    <li><a href="#">.....</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                 </ul>
               
               
@@ -147,7 +147,7 @@ $("#result").click(function(e){
             <!-- main right col -->
             <div class="column col-sm-10 col-xs-11" id="main">
                 
-                <!-- top nav -->
+                <!-- top nav 
               	<div class="navbar navbar-blue navbar-static-top">  
                     <div class="navbar-header">
                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -157,8 +157,9 @@ $("#result").click(function(e){
           				<span class="icon-bar"></span>
                       </button>
                     <!--<a href="/" class="navbar-brand logo">Cb</a>-->
-                  	</div>
+                  	<!--</div>
                   	<nav class="collapse navbar-collapse" role="navigation">
+<<<<<<< HEAD
 <div class="content">
 <b>Atma</b>
 <!--<input type="text" class="search" id="searchid" placeholder="Search for Blogs" />&nbsp; &nbsp; <br />  -->
@@ -166,6 +167,27 @@ $("#result").click(function(e){
 </div>
 </div>
                     </nav>
+=======
+                    -->
+
+
+<!--<input type="text" class="search" id="searchid" placeholder="Search for Blogs" />&nbsp; &nbsp; <br />  -->
+  <form class="form" >   <div border="1" width="100%" align="right"  style="margin-right:10px,margin-top:10px,padding-right:20px">                   
+  
+                                    <div class="input-group text-center">
+                                  
+										<a href="registrations/logincolg.php"><button class="btn btn-lg btn-primary" type="button" style="margin-top:10px">Login</button>&nbsp&nbsp
+                                       <a href="registrations/colgreg.php"><button class="btn btn-lg btn-primary" type="button" style="margin-top:10px">Signup</button>&nbsp&nbsp</a>
+                                    </div></div>
+                                  </form>
+
+<div id="result">
+
+</div>
+
+                    
+                  	</nav>
+>>>>>>> dbf7360efd91ea00a1d1bce85d171345c9adeb15
                 </div>
                 <div class="padding">
                     <div class="full col-sm-9">
@@ -176,6 +198,7 @@ $("#result").click(function(e){
                          <div class="col-sm-5">
                               <img src="image/logo.png" style="float:left">
                          </div>
+<<<<<<< HEAD
 						 &nbsp;
 						 &nbsp;
 						 &nbsp;
@@ -194,6 +217,20 @@ $("#result").click(function(e){
 						</div>
                         </div> 
                     </div>
+=======
+						 
+                              </div>
+
+                           
+                             
+                           
+                             
+                           
+
+                              
+                           
+                          </div>
+>>>>>>> dbf7360efd91ea00a1d1bce85d171345c9adeb15
                           
                        </div><!--/row-->  
                       <hr>
