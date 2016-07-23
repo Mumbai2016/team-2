@@ -227,7 +227,7 @@ $("#result").click(function(e){
                           
                          <!-- main col left --> 
                          <div class="col-sm-4">
-                              <img src="atmalogo.png" style="float:left">
+                              <img src="image/logo.png" style="float:left">
                          </div>
 						 &nbsp;
 						 &nbsp;
