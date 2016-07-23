@@ -11,6 +11,10 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+
+    
+    
+
 <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -39,16 +43,23 @@ jQuery("#result").live("click",function(e){
   var decoded = $("<div/>").html($name).text();
   $('#searchid').val(decoded);
 });
+
+
 jQuery(document).live("click", function(e) { 
   var $clicked = $(e.target);
   if (! $clicked.hasClass("search")){
   jQuery("#result").fadeOut('slow'); 
   }
 });
+
+
 $('#searchid').click(function(){
   jQuery("#result").fadeIn();
 });
 });
+
+
+
 $(document).click(function(){
   $("#result").hide();
 });
@@ -58,12 +69,13 @@ $(document).click(function(){
 $("#result").click(function(e){
   e.stopPropagation();
 });
+
+
 </script>
 <style type="text/css">
   body{ 
     font-family:Tahoma, Geneva, sans-serif;
     font-size:18px;
-	background-image: url("background.jpg");
   }
   .content{
     width:900px;
@@ -88,7 +100,7 @@ $("#result").click(function(e){
     border-top:0px;
     overflow:hidden;
     border:1px #CCC solid;
-  <!--  background-color: white; -->
+    background-color: white;
   }
   .show
   {
@@ -105,8 +117,27 @@ $("#result").click(function(e){
     cursor:pointer;
   }
 </style>
+
+
+
+
+
+
 	</head>
 	<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="wrapper">
     <div class="box">
@@ -122,11 +153,25 @@ $("#result").click(function(e){
                       <h3>Atma</h3>
                     </li>
                 </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li class="active"><a href="registrations/adminlogin.php">Admin</a></li>
                     <li><a href="registrations/ngologin.php">NGO login</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">.....</a></li>
+                    <li><a href="#">.....</a></li>
                 </ul>
               
               
@@ -141,13 +186,21 @@ $("#result").click(function(e){
 </div>
 
 <script async src="//static.addtoany.com/menu/page.js"></script>
+
+
+
+
+
+              	<!-- tiny only nav-->
+          
+              
             </div>
             <!-- /sidebar -->
           
             <!-- main right col -->
             <div class="column col-sm-10 col-xs-11" id="main">
                 
-                <!-- top nav 
+                <!-- top nav -->
               	<div class="navbar navbar-blue navbar-static-top">  
                     <div class="navbar-header">
                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -157,48 +210,35 @@ $("#result").click(function(e){
           				<span class="icon-bar"></span>
                       </button>
                     <!--<a href="/" class="navbar-brand logo">Cb</a>-->
-                  	<!--</div>
+                  	</div>
                   	<nav class="collapse navbar-collapse" role="navigation">
-<<<<<<< HEAD
+                    
+
+
 <div class="content">
 <b>Atma</b>
 <!--<input type="text" class="search" id="searchid" placeholder="Search for Blogs" />&nbsp; &nbsp; <br />  -->
 <div id="result">
+
+
 </div>
 </div>
-                    </nav>
-=======
-                    -->
-
-
-<!--<input type="text" class="search" id="searchid" placeholder="Search for Blogs" />&nbsp; &nbsp; <br />  -->
-  <form class="form" >   <div border="1" width="100%" align="right"  style="margin-right:10px,margin-top:10px,padding-right:20px">                   
-  
-                                    <div class="input-group text-center">
-                                  
-										<a href="registrations/logincolg.php"><button class="btn btn-lg btn-primary" type="button" style="margin-top:10px">Login</button>&nbsp&nbsp
-                                       <a href="registrations/colgreg.php"><button class="btn btn-lg btn-primary" type="button" style="margin-top:10px">Signup</button>&nbsp&nbsp</a>
-                                    </div></div>
-                                  </form>
-
-<div id="result">
-
-</div>
-
                     
                   	</nav>
->>>>>>> dbf7360efd91ea00a1d1bce85d171345c9adeb15
                 </div>
+                <!-- /top nav -->
+              
+              
                 <div class="padding">
                     <div class="full col-sm-9">
                       
                         <!-- content -->                      
                         <div class="row">
+                          
                          <!-- main col left --> 
-                         <div class="col-sm-5">
+                         <div class="col-sm-4">
                               <img src="image/logo.png" style="float:left">
                          </div>
-<<<<<<< HEAD
 						 &nbsp;
 						 &nbsp;
 						 &nbsp;
@@ -213,12 +253,8 @@ $("#result").click(function(e){
                                        <a href="registrations/colgreg.php"><button class="btn btn-lg btn-primary" type="button">Signup</button></a>
                                     </div>
                                   </form>
-                        </div>
-						</div>
-                        </div> 
-                    </div>
-=======
-						 
+                                </div>
+</div>
                               </div>
 
                            
@@ -230,18 +266,83 @@ $("#result").click(function(e){
                               
                            
                           </div>
->>>>>>> dbf7360efd91ea00a1d1bce85d171345c9adeb15
                           
-                       </div><!--/row-->  
+                          
+                          <!-- main col right -->
+                          <div class="col-sm-7">
+                               
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      
+                             
+                              
+                            
+                          </div>
+                       </div><!--/row-->
+                      
+                       
+                     
+                      
                       <hr>
+                      
+                     
                       <hr>
-                      </div><!-- /col-9 -->
+                        
+                      
+                    </div><!-- /col-9 -->
                 </div><!-- /padding -->
             </div>
             <!-- /main -->
+          
         </div>
     </div>
 </div>
+
+
+
+
+<!--post modal-->
+
+
+
+
+
+
+
+
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
