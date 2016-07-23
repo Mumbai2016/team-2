@@ -177,34 +177,35 @@
         <div class="content">
             <div class="container-fluid">        
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2015 Projects Completion</h4>
-                                <p class="category">All projects under the model</p>
-                            </div>
-                            <div class="content">
-                                 <div id="chart_div"></div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <div class="card ">
+                        <div class="header">
+                            <h4 class="title">2015 Project Progress</h4>
+                            <p class="category">Monthly milestones</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartActivity" class="ct-chart"></div>
 
-                                <div class="footer">
-                                <!--    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i>Planned
-                                        <i class="fa fa-circle text-danger"></i>Achieved
-                                    </div> -->
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
-                                    </div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-info"></i> Planned
+                                    <i class="fa fa-circle text-danger"></i> Achieved
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-check"></i> Data information certified
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">Projects and Strategies</h4>
-                                <p class="category">Covering Milestones</p>
+                                <h4 class="title">NGO Feedbacks</h4>
+                             <!--   <p class="category">Covering Milestones</p> -->
                             </div>
                             <div class="content">
                                 <div class="table-full-width">
@@ -216,7 +217,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>To write blogs for Network and FB based on research on different topics"</td>
+                                                <td>Progress in data updation happening according to deadlines!</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -232,7 +233,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>To create a fundraising plan for Urmi Foundation, keeping in mind different sources. This includes research of potential funders.</td>
+                                                <td>No Proper support for the social handles of the institution.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -248,7 +249,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>To create a recruitment plan for Swastik School for Superviser position.</td>
+                                                <td>Recruitment plan for the Swastik Foundation working as per plan.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -264,7 +265,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Expand the reach of Dream A Dream to 4 cities.</td>
+                                                <td>Expanding the reach for the NGO going according to milestones.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -280,7 +281,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Help strategise the placement of students.</td>
+                                                <td>Placement graph for the institution growing exponentially.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -296,7 +297,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Boost cultural activities to strengthen the all round development.</td>
+                                                <td>Helpful volunteers for the event held on the anniversary celebration.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -416,3 +417,24 @@
     </script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
