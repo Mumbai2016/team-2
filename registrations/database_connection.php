@@ -2,7 +2,7 @@
 
 /*Database Basic Constants for connections */
 DEFINE('DATABASE_USER', 'root');
-DEFINE('DATABASE_PASSWORD', '');
+DEFINE('DATABASE_PASSWORD', 'root');
 DEFINE('DATABASE_HOST', 'localhost');
 DEFINE('DATABASE_NAME', 'atma');
 date_default_timezone_set('UTC');
