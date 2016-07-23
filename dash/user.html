@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Atma - User Profile</title>
+	<title>Atma - Volunteer Feedback</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -47,24 +47,25 @@
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="user.html">
-                        <i class="pe-7s-user"></i>
-                        <p>Profile</p>
+                        <i class="pe-7s-note2"></i>
+                        <p>Feedback</p>
                     </a>
                 </li>
-                <li>
+                
+                <!--  <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
                         <p>LeaderBoard</p>
                     </a>
                 </li>
-              <!--  <li>
+                <li>
                     <a href="typography.html">
                         <i class="pe-7s-news-paper"></i>
                         <p>Typography</p>
@@ -75,13 +76,13 @@
                         <i class="pe-7s-science"></i>
                         <p>Icons</p>
                     </a>
-                </li>-->
+                </li>
                 <li>
                     <a href="maps.html">
                         <i class="pe-7s-map-marker"></i>
                         <p>Maps</p>
                     </a>
-                </li>
+                </li>-->
                 
     	</div>
     </div>
@@ -96,7 +97,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Profile</a>
+                    <a class="navbar-brand" href="#">Volunteer Feedback</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -126,10 +127,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-10">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Edit Profile</h4>
+                            <!--   <h4 class="title">Edit Profile</h4>  -->
                             </div>
                             <div class="content">
                                 <form>
@@ -139,7 +140,7 @@
                                                 <label>Organisation working for</label>
                                                 <input type="text" class="form-control" placeholder="Company" value="Abc School">
                                             </div>
-                                        </div> -->
+                                        </div> 
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Username</label>
@@ -152,19 +153,18 @@
                                                 <input type="email" class="form-control" placeholder="Email">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>First Name</label>
-                                                <input type="text" class="form-control" placeholder="Company" value="">
+                                                <label>Volunteer Name</label>
+                                                <input type="text" class="form-control" placeholder="Name" value="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Last Name</label>
-                                                <input type="text" class="form-control" placeholder="Last Name" value="">
+                                                <label>Project Assigned</label>
+                                                <input type="text" class="form-control" placeholder="Project Name" value="">
                                             </div>
                                         </div>
                                     </div>
@@ -172,13 +172,14 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control" placeholder="Home Address" value="">
+                                                <label>Feedback</label>
+                                                <textarea rows="5" class="form-control" placeholder="" value="" class="form-group">    
+                                                </textarea>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>City</label>
@@ -232,14 +233,14 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <button type="submit" class="btn btn-info btn-fill pull-left">Update Profile</button>
-									<button type="submit" class="btn btn-info btn-fill pull-right">Apply</button>
-                                    <div class="clearfix"></div>
+                                    -->
+                                    <button type="submit" class="btn btn-info btn-fill pull-left">Submit Feedback</button>
+		                            <div class="clearfix"></div>
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <!--
                     <div class="col-md-4">
                         <div class="card card-user">
                             <div class="image">
@@ -269,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-
+                    -->
                 </div>
             </div>
         </div>
@@ -302,8 +303,7 @@
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+                    &copy; 2016  <a href="http://www.atma.org.in">Atma</a> contact@atma.org.in</p>
             </div>
         </footer>
 
