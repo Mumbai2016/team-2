@@ -106,7 +106,7 @@ $dbc = new mysqli('localhost', 'root', '', 'atma');
 
             $_SESSION = mysqli_fetch_array($result_check_credentials, MYSQLI_ASSOC);//Assign the result of this query to SESSION Global Variable
 
-            header("Location:../dash/dashboard.html");
+            header("Location:../dash/dashboard.php");
 
 
           }else
