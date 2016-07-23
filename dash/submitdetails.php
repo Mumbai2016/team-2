@@ -1,4 +1,9 @@
 <?php
+
+include '../registrations/database_connection.php';
+session_start();
+
+$username = $_SESSION['username'];
 if(isset($_POST['submit'])){
 // Fetching variables of the form which travels in URL
 $fname = $_POST['fname'];
@@ -19,7 +24,7 @@ error_reporting(0);
 include ('database_connection.php');
 $dbc = new mysqli('localhost', 'root', '', 'atma');
 
-$query_insert_user = "INSERT INTO `volunteers` ( `username`, `email`, `firstname`,`lastname`,`address`,`city`,`country`,`postalcode`,`workexp`,`mobileno`) VALUES ( 'malabika', '$email', '$fname','$lname','$address','$city','$country','$postalcode','$workex','$mobileno')";
+$query_insert_user = "INSERT INTO `volunteers` ( `username`, `email`, `firstname`,`lastname`,`address`,`city`,`country`,`postalcode`,`workexp`,`mobileno`) VALUES ( '$username', '$email', '$fname','$lname','$address','$city','$country','$postalcode','$workex','$mobileno')";
 
 
 

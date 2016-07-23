@@ -1,3 +1,37 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+//$conn = new mysqli($servername, $username, $password);
+
+$dbname = "test";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+if ($_POST) {
+
+$volunteer_name = $_POST['volunteer_name'];
+  $project_assigned = $_POST['project_assigned'];
+  $feedback = $_POST['feedback'];
+$query = "  INSERT INTO feedback VALUES ('$volunteer_name',
+        '$project_assigned', '$feedback');";
+
+  mysqli_query($conn,$query);
+ // mysqli_query($conn,$sql);
+
+}
+$conn->close();
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -133,7 +167,7 @@
                             <!--   <h4 class="title">Edit Profile</h4>  -->
                             </div>
                             <div class="content">
-                                <form>
+                                <form action="user.php" method="post">
                                     <div class="row">
                                     <!--    <div class="col-md-5">
                                             <div class="form-group">
@@ -158,13 +192,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Volunteer Name</label>
-                                                <input type="text" class="form-control" placeholder="Name" value="">
+                                                <input type="text" class="form-control" placeholder="Name" value="" name="volunteer_name">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Project Assigned</label>
-                                                <input type="text" class="form-control" placeholder="Project Name" value="">
+                                                <input type="text" class="form-control" placeholder="Project Name" value="" name="project_assigned">
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +207,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Feedback</label>
-                                                <textarea rows="5" class="form-control" placeholder="" value="" class="form-group">    
+                                                <textarea rows="5" class="form-control" placeholder="" value="" class="form-group" name="feedback">    
                                                 </textarea>
                                             </div>
                                         </div>
