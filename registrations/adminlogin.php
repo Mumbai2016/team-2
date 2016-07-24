@@ -20,15 +20,7 @@ session_start();
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="../css/styles.css" rel="stylesheet">
-    <?php
-   session_start(); //starts the session
-   if($_SESSION['Username']){ // checks if the user is logged in  
-   }
-   else{
-      header("location: ../registrations/login.php"); // redirects if user is not logged in
-   }
-   $user = $_SESSION['Username']; //assigns user value
-   ?>
+    
 
 
  
@@ -62,7 +54,7 @@ $dbc = new mysqli('localhost', 'root', 'root', 'atma');
 
     if (isset($_POST['formsubmitted'])) {
     // Initialize a session:
-      session_start();
+      //session_start();
     $error = array();//this array will store all error messages
 
 
@@ -113,13 +105,15 @@ $dbc = new mysqli('localhost', 'root', 'root', 'atma');
 
 
 
-
+            
             $_SESSION = mysqli_fetch_array($result_check_credentials, MYSQLI_ASSOC);//Assign the result of this query to SESSION Global Variable
-
+            
+            
             header("Location:../dash/atmadash.php");
 
 
-          }else
+          }
+          else
           { 
 
             $msg_error= 'Either Your Account is inactive or Email address /Password is Incorrect';

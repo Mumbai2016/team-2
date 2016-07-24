@@ -4,17 +4,15 @@
     <?php
         ob_start();
         session_start();
-    //starts the session
+        session_start(); //starts the session
+
         if($_SESSION['Username']){ // checks if the user is logged in  
             }
         else{
             header("location: ../registrations/login.php"); // redirects if user is not logged in
             }
-        $user = $_SESSION['Username']; //assigns user value 
-
-error_reporting(0);
-         ?>
-
+        $user = $_SESSION['Username']; //assigns user value
+    ?>
 
     <style>
      .pieContainer {
@@ -116,6 +114,14 @@ error_reporting(0);
                 <a href="#" class="simple-text">
                     <?php
                         session_start();
+                    
+                        <?php
+                            if(!isset($_SESSION)) 
+                                { 
+                                session_start(); 
+                                } 
+                        
+                        
                         //include ('..\database_connection.php');
                         $username = $_SESSION['Username'];
                         echo $username;
@@ -125,7 +131,7 @@ error_reporting(0);
 
             <ul class="nav">
                     <li class="active">
-                    <a href="atmadash.php">
+                    <a href="dashboard.php">
                         <i class="pe-7s-graph"></i> 
                         <p>Project Analysis</p>
                     </a>
@@ -188,6 +194,8 @@ error_reporting(0);
                         </li>
                         <li>
                             <a href="#">
+                            <a href="../index.php">
+                                
                                 Log out
                             </a>
                         </li>
