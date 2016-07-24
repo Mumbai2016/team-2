@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -47,6 +54,7 @@
 
                         $username = $_SESSION['Username'];
                         $_SESSION['username'] = $username;
+                        $Email = $_SESSION['Email'];
                         echo $username;
                     ?>
                 </a>
@@ -235,7 +243,67 @@ $rank++;
 
 
 
+<div class="header">
+                                <h4 class="title">Connecting to Volunteers</h4>
+                                <p class="category"></p>
+                            </div>
+                            <div class="content">
+                                <div class="table-full-width">
+                                    
 
+                                   <form action="test.php" method="post" enctype="multipart/form-data">
+                                    <div class="row">
+                                    <!--    <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Organisation working for</label>
+                                                <input type="text" class="form-control" placeholder="Company" value="Abc School">
+                                            </div>
+                                        </div> -->
+                                        
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" name = "email"class="form-control" value="<?php echo $Email;?>">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>User Name</label>
+                                                <input type="text" name = "fname" class="form-control" value="<?php echo $username;?>" value="">
+                                            </div>
+                                        </div>
+                                       <!-- <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>L Name</label>
+                                                <input type="text" name = "lname" class="form-control" placeholder="Last Name" value="">
+                                            </div>
+                                        </div> -->
+
+                                         <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Message</label>
+                                                <input type="text" name = "message" class="form-control" placeholder="Message" value="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                   
+
+                                    <button type="submit" name = "submit"class="btn btn-info btn-fill pull-left">Update Profile</button>
+                                
+                                    <div class="clearfix"></div>
+                                </form>
+                                  
+
+
+
+
+
+                                </div>
 
 
 
@@ -293,3 +361,8 @@ $rank++;
 	<script src="assets/js/demo.js"></script>
 
 </html>
+
+
+
+
+
