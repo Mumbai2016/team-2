@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -61,7 +63,7 @@
                 <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
-                        <p>LeaderBoard</p>
+                        <p>NGO Registration</p>
                     </a>
                 </li>
               <!--  <li>
@@ -103,8 +105,8 @@
                     
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="">
-                               Account
+                           <a href="login_ngo.php">
+                               Already a member? Login!
                             </a>
                         </li>
                         <li>
@@ -124,82 +126,39 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">LeaderBoard</h4>
+                                <h4 class="title">NGO Login</h4>
                                 <p class="category"></p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>Rank</th>
-										<th>User ID</th>
-                                    	<th>Name of Volunteer</th>
-                                    	<th>Points earned quaterly</th>
-                                    	<th>Points earned annualy</th>
-                                    	
-                                    </thead>
-								
-						
-		
-		                                
-<?php
+                                
+                                  <div class="content">
+                                <form action="submitdetails.php" method="post" enctype="multipart/form-data">
+                                    <div class="row">
+                                    <!--    <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Organisation working for</label>
+                                                <input type="text" class="form-control" placeholder="Company" value="Abc School">
+                                            </div>
+                                        </div> -->
+                                        
 
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="text" name = "fname" class="form-control" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name = "lname" class="form-control" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                    </div>
 
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$db_name = 'atma';
-$tbl_name = 'volunteers';
-
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db_name);
-if(! $conn )
-{
-  die('Could not connect: ' . mysql_error());
-}
-mysqli_select_db($conn,"$db_name")or die("cannot select DB");
-
-
-$rank=1; 
-$query1="SELECT user_id, firstname, lastname FROM `volunteer-workhours` volw, `volunteers` vol where volw.id = vol.id";
-$result=mysqli_query($conn,$query1);
-
-$now = time(); // or your date as well
-$your_date = strtotime("2016-07-01");
-$datediff = $now - $your_date;
-         
-if ($result->num_rows > 0) {
-     // output data of each row
-     while($rows = $result->fetch_assoc()) {
-    
-	 $datediff = floor($datediff/(60*60*24));
-	 $datediff+=17;
-
-	
-echo "<tr>"."<td>" .$rank."</td><td>". $rows["user_id"]. "</td><td>" . $rows["firstname"]."</td><td>" .$datediff."</td><td>". $datediff*3 ."</td>"."</tr>";
-
-
-$rank++;
-
-
-	 }
-}
-  
-
-
-
-    ?>
-
-
- 
-										
-										
-										
-										
-        
-   
-
-                                    </table>
-                                  
-
+                                    
+								<input type="submit" name="Submit"/>
                             </div>
                         </div>
                     </div>
@@ -238,7 +197,8 @@ $rank++;
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.atma.org.in"> Atma</a></p>
+                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                </p>
             </div>
         </footer>
 

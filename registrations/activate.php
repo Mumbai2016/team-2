@@ -76,7 +76,7 @@ ob_start();
   </section>
 </header>   
      <?php
-     $dbc = mysqli_connect("localhost","root","","cachebuffer");
+     $dbc = mysqli_connect("localhost","root","root","cachebuffer");
 
      if (isset($_GET['email']) && preg_match('/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/', $_GET['email']))
      {

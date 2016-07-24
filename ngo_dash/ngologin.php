@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>Atma - NGO Login</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -61,7 +62,7 @@
                 <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
-                        <p>LeaderBoard</p>
+                        <p>NGO Registration</p>
                     </a>
                 </li>
               <!--  <li>
@@ -97,14 +98,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Table List</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="">
-                               Account
+                           <a href="login_ngo.php">
+                               Already a member? Login!
                             </a>
                         </li>
                         <li>
@@ -124,82 +124,83 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">LeaderBoard</h4>
+                                <h4 class="title">NGO Registration</h4>
                                 <p class="category"></p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>Rank</th>
-										<th>User ID</th>
-                                    	<th>Name of Volunteer</th>
-                                    	<th>Points earned quaterly</th>
-                                    	<th>Points earned annualy</th>
-                                    	
-                                    </thead>
-								
-						
-		
-		                                
-<?php
+                                
+                                  <div class="content">
+                                <form action="submitdetails.php" method="post" enctype="multipart/form-data">
+                                    <div class="row">
+                                    <!--    <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Organisation working for</label>
+                                                <input type="text" class="form-control" placeholder="Company" value="Abc School">
+                                            </div>
+                                        </div> -->
+                                        
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Organisation Email</label>
+                                                <input type="email" name = "email"class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="text" name = "fname" class="form-control" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name = "lname" class="form-control" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                    </div>
 
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$db_name = 'atma';
-$tbl_name = 'volunteers';
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Office Address</label>
+                                                <input type="text" name = "address"class="form-control" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                    </div>
 
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db_name);
-if(! $conn )
-{
-  die('Could not connect: ' . mysql_error());
-}
-mysqli_select_db($conn,"$db_name")or die("cannot select DB");
-
-
-$rank=1; 
-$query1="SELECT user_id, firstname, lastname FROM `volunteer-workhours` volw, `volunteers` vol where volw.id = vol.id";
-$result=mysqli_query($conn,$query1);
-
-$now = time(); // or your date as well
-$your_date = strtotime("2016-07-01");
-$datediff = $now - $your_date;
-         
-if ($result->num_rows > 0) {
-     // output data of each row
-     while($rows = $result->fetch_assoc()) {
-    
-	 $datediff = floor($datediff/(60*60*24));
-	 $datediff+=17;
-
-	
-echo "<tr>"."<td>" .$rank."</td><td>". $rows["user_id"]. "</td><td>" . $rows["firstname"]."</td><td>" .$datediff."</td><td>". $datediff*3 ."</td>"."</tr>";
-
-
-$rank++;
-
-
-	 }
-}
-  
-
-
-
-    ?>
-
-
- 
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" name = "city" class="form-control" placeholder="City" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" name = "country" class="form-control" placeholder="Country" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Postal Code</label>
+                                                <input type="number" name = "postalcode" class="form-control" placeholder="ZIP Code">
+                                            </div>
+                                        </div>
+										<div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Organisation Number</label>
+                                                <input type="number" name = "number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
 										
-										
-										
-										
-        
-   
+                                    </div>
 
-                                    </table>
-                                  
 
+								<input type="submit" name="Submit"/>
                             </div>
                         </div>
                     </div>
@@ -238,7 +239,7 @@ $rank++;
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.atma.org.in"> Atma</a></p>
+                    &copy; 2016 <a href="http://www.atma.org.in">Atma</a> </p>
             </div>
         </footer>
 
