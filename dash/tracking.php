@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>User Profile</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -41,7 +41,14 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    ATMA
+                    <?php
+                        include '../registrations/database_connection.php';
+                        session_start();
+
+                        $username = $_SESSION['Username'];
+                        $_SESSION['username'] = $username;
+                        echo $username;
+                    ?>
                 </a>
             </div>
 
@@ -83,7 +90,6 @@
                     </a>
                 </li>
                 
-                  </ul>
     	</div>
     </div>
 
@@ -97,10 +103,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Table List</a>
+                    <a class="navbar-brand" href="#">Profile</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="">
@@ -108,7 +120,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/team-2/index.php">
                                 Log out
                             </a>
                         </li>
@@ -121,32 +133,46 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Volunteer Tracking</h4>
+                            </div>
+                            <div class="content">
+                               
+
+
+                                 <div class="content">
+            <div class="container-fluid">
+                <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">LeaderBoard</h4>
                                 <p class="category"></p>
+                            </br>
+                                <p><b>Volunteers are rated according to their support for our organization depending upon the various criterias.</b></p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Rank</th>
-										<th>User ID</th>
-                                    	<th>Name of Volunteer</th>
-                                    	<th>Points earned quaterly</th>
-                                    	<th>Points earned annualy</th>
-                                    	
+                                        <th>User ID</th>
+                                        <th>Name of Volunteer</th>
+                                        <th>Points earned quaterly</th>
+                                        <th>Points earned annualy</th>
+                                        
                                     </thead>
-								
-						
-		
-		                                
+                                
+                        
+        
+                                        
 <?php
 
 
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = '';
+$dbpass = 'root';
 $db_name = 'atma';
 $tbl_name = 'volunteers';
 
@@ -159,7 +185,7 @@ mysqli_select_db($conn,"$db_name")or die("cannot select DB");
 
 
 $rank=1; 
-$query1="SELECT user_id, firstname, lastname FROM `volunteer-workhours` volw, `volunteers` vol where volw.id = vol.id";
+$query1="SELECT user_id, firstname, lastname FROM `volunteer-workhours` volw, `volunteers` vol where volw.id = vol.id" ;
 $result=mysqli_query($conn,$query1);
 
 $now = time(); // or your date as well
@@ -170,17 +196,17 @@ if ($result->num_rows > 0) {
      // output data of each row
      while($rows = $result->fetch_assoc()) {
     
-	 $datediff = floor($datediff/(60*60*24));
-	 $datediff+=17;
+     $datediff = floor($datediff/(60*60*24));
+     $datediff+=17;
 
-	
+    
 echo "<tr>"."<td>" .$rank."</td><td>". $rows["user_id"]. "</td><td>" . $rows["firstname"]."</td><td>" .$datediff."</td><td>". $datediff*3 ."</td>"."</tr>";
 
 
 $rank++;
 
 
-	 }
+     }
 }
   
 
@@ -190,10 +216,10 @@ $rank++;
 
 
  
-										
-										
-										
-										
+                                        
+                                        
+                                        
+                                        
         
    
 
@@ -205,43 +231,38 @@ $rank++;
                     </div>
 
 
-                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+             
 
                 </div>
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                               Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.atma.org.in"> Atma</a></p>
-            </div>
-        </footer>
 
+   
 
     </div>
 </div>
@@ -270,6 +291,5 @@ $rank++;
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-
 
 </html>
