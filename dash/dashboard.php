@@ -277,7 +277,7 @@ $flagone = 0;
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>STo write blogs for Network and FB based on research on different topics"</td>
+                                                <td>To write blogs for Network and FB based on research on different topics"</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
