@@ -1,44 +1,10 @@
-<?php
-
-
-require 'phpmailer/PHPMailerAutoload.php';
 
 
 
-$mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'infotech.cachebuffer@gmail.com';                 // SMTP username
-$mail->Password = '*********';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('from@example.com', 'Mailer');
-$mail->addAddress('deodaardeepak@gmail.com', 'Deepak User');     // Add a recipient
-$mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo('info@example.com', 'Information');
-$mail->addCC('cc@example.com');
-$mail->addBCC('bcc@example.com');
 
-  // Optional name
-$mail->isHTML(true);                                  // Set email format to HTML
-
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-} else {
-    echo 'Message has been sent';
-}
-
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -278,14 +244,14 @@ $rank++;
 
 
 <div class="header">
-                                <h4 class="title"><b>Connecting to Volunteers</b></h4>
+                                <h4 class="title">Connecting to Volunteers</h4>
                                 <p class="category"></p>
                             </div>
                             <div class="content">
                                 <div class="table-full-width">
                                     
 
-                                   <form action="tracking.php" method="post" enctype="multipart/form-data">
+                                   <form action="test.php" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                     <!--    <div class="col-md-5">
                                             <div class="form-group">
@@ -327,7 +293,7 @@ $rank++;
 
                    
 
-                                    <button type="submit" name = "submit"class="btn btn-info btn-fill pull-left">Send Message</button>
+                                    <button type="submit" name = "submit"class="btn btn-info btn-fill pull-left">Update Profile</button>
                                 
                                     <div class="clearfix"></div>
                                 </form>
@@ -395,3 +361,8 @@ $rank++;
 	<script src="assets/js/demo.js"></script>
 
 </html>
+
+
+
+
+
