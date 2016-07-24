@@ -4,7 +4,6 @@
     <?php
         ob_start();
         session_start();
-        session_start(); //starts the session
         if($_SESSION['Username']){ // checks if the user is logged in  
             }
         else{
@@ -111,8 +110,14 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    <?php
-                        session_start();
+                    
+                        <?php
+                            if(!isset($_SESSION)) 
+                                { 
+                                session_start(); 
+                                } 
+                        
+                        
                         //include ('..\database_connection.php');
                         $username = $_SESSION['Username'];
                         echo $username;
@@ -184,7 +189,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="../index.php">
+                                
                                 Log out
                             </a>
                         </li>
