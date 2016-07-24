@@ -61,43 +61,45 @@
             </div>
 
             <ul class="nav">
-                <li>
+                    <li class="active">
                     <a href="dashboard.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <i class="pe-7s-graph"></i> 
+                        <p>Project Analysis</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="user.php">
+                <li>
+                    <a href="atmadashboard.php">
+                        <i class="pe-7s-graph"></i>
+                        <p>Track Progress</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
                         <i class="pe-7s-user"></i>
-                        <p>Profile</p>
+                        <p>Volunteer Life Cycle</p>
                     </a>
                 </li>
                 <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
-                        <p>LeaderBoard</p>
+                        <p>Feedback</p>
                     </a>
                 </li>
-              <!--  <li>
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
+
                 <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>-->
-                <li>
-                    <a href="maps.html">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
+                    <a href="tracking.php">
+                        <i class="pe-7s-note2"></i>
+                        <p>Tracking</p>
                     </a>
                 </li>
+
+
+
+
+
                 
+                
+            </ul>
     	</div>
     </div>
 
