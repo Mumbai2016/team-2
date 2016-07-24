@@ -110,7 +110,7 @@
 
             <ul class="nav">
                     <li class="active">
-                    <a href="dashboard.php">
+                    <a href="atmadash.php">
                         <i class="pe-7s-graph"></i> 
                         <p>Project Analysis</p>
                     </a>
