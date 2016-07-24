@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <?php
+        ob_start();
+        session_start();
+        session_start(); //starts the session
+        if($_SESSION['Username']){ // checks if the user is logged in  
+            }
+        else{
+            header("location: ../registrations/login.php"); // redirects if user is not logged in
+            }
+        $user = $_SESSION['Username']; //assigns user value
+    ?>
+
     <style>
      .pieContainer {
           height: 300px;
