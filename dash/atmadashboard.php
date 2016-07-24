@@ -1,43 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<style>
+    <style>
      .pieContainer {
-          height: 100px;
+          height: 300px;
      }
      .pieBackground {
           background-color: grey;
           position: absolute;
-          width: 100px;
-          height: 100px;
+          width: 300px;
+          height: 300px;
           -moz-border-radius: 50px;
-          -webkit-border-radius: 50px;
+          -webkit-border-radius: 150px;
           -o-border-radius: 50px;
-          border-radius: 50px;
+          border-radius: 150px;
           -moz-box-shadow: -1px 1px 3px #000;
           -webkit-box-shadow: -1px 1px 3px #000;
           -o-box-shadow: -1px 1px 3px #000;
           box-shadow: -1px 1px 3px #000;
      } 
 </style>
-<?php
-session_start();
-include ('../registrations/database_connection.php');
-$dbc = new mysqli('localhost', 'root', 'root', 'atma');
-$username = $_SESSION['Username'];
-echo "username";
-echo $username;
-
-$query_id = "SELECT email FROM volunteers WHERE username = $username";
-$result_id = mysqli_query($dbc, $query_id);
-echo "result id";
-echo "before";
-echo $result_id;
-echo "after";
-
-
-?>
-
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
@@ -54,32 +36,30 @@ echo "after";
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        var complete = 3;
-        var remaining = 1;
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Complete', complete],
-          ['Remaining', remaining],
+          ['Complete', 3],
+          ['Remaining', 1],
         ]);
 
         // Set chart options
         var options = {'title':'Completion of your Project',
-                       'width':400,
-                       'height':300};
+                       'width':450,
+                       'height':400};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Atma - Dashboard</title>
+    <title>Atma - Dashboard</title>
 
-	<meta content='width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
 
@@ -116,59 +96,51 @@ echo "after";
 
     -->
 
-    	<div class="sidebar-wrapper">
+        <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
                     <?php
-                        
+                        session_start();
                         //include ('..\database_connection.php');
-                        
+                        $username = $_SESSION['Username'];
                         echo $username;
                     ?>
                 </a>
             </div>
 
             <ul class="nav">
-                <li>
+                    <li class="active">
                     <a href="dashboard.php">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
+                        <i class="pe-7s-graph"></i> 
+                        <p>Project Analysis</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="user.php">
+                <li>
+                    <a href="atmadashboard.php">
+                        <i class="pe-7s-graph"></i>
+                        <p>Track Progress</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
                         <i class="pe-7s-user"></i>
-                        <p>Profile</p>
+                        <p>Volunteer Life Cycle</p>
                     </a>
                 </li>
                 <li>
                     <a href="table.html">
                         <i class="pe-7s-note2"></i>
-                        <p>LeaderBoard</p>
+                        <p>Feedback</p>
                     </a>
                 </li>
-              <!--  <li>
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>-->
-                <li>
-                    <a href="maps.html">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
-                    </a>
-                </li>
+
+
+
+
                 
-				
+                
             </ul>
-    	</div>
+        </div>
     </div>
 
     <div class="main-panel">
@@ -205,34 +177,35 @@ echo "after";
         <div class="content">
             <div class="container-fluid">        
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2015 Projects Completion</h4>
-                                <p class="category">All projects under the model</p>
-                            </div>
-                            <div class="content">
-                                 <div id="chart_div"></div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <div class="card ">
+                        <div class="header">
+                            <h4 class="title">2015 Project Progress</h4>
+                            <p class="category">Monthly milestones</p>
+                        </div>
+                        <div class="content">
+                            <div id="chartActivity" class="ct-chart"></div>
 
-                                <div class="footer">
-                                <!--    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i>Planned
-                                        <i class="fa fa-circle text-danger"></i>Achieved
-                                    </div> -->
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
-                                    </div>
+                            <div class="footer">
+                                <div class="legend">
+                                    <i class="fa fa-circle text-info"></i> Planned
+                                    <i class="fa fa-circle text-danger"></i> Achieved
+                                </div>
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-check"></i> Data information certified
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">Tasks</h4>
-                                <p class="category">Covering Milestones</p>
+                                <h4 class="title">NGO Feedbacks</h4>
+                             <!--   <p class="category">Covering Milestones</p> -->
                             </div>
                             <div class="content">
                                 <div class="table-full-width">
@@ -244,7 +217,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td>Progress in data updation happening according to deadlines!</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -260,7 +233,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td>No Proper support for the social handles of the institution.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -276,7 +249,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit</td>
+                                                <td>Recruitment plan for the Swastik Foundation working as per plan.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -292,7 +265,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td>Expanding the reach for the NGO going according to milestones.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -308,7 +281,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Read "Following makes Medium better"</td>
+                                                <td>Placement graph for the institution growing exponentially.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -324,7 +297,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td>Helpful volunteers for the event held on the anniversary celebration.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -350,6 +323,16 @@ echo "after";
                    
                    
                 </div>
+
+
+
+                
+
+                    
+
+                   
+                    
+                </div>   
                 </div>
             </div>
         </div>
@@ -394,13 +377,13 @@ echo "after";
 
     <!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
-	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
+    <!--  Charts Plugin -->
+    <script src="assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
@@ -409,28 +392,49 @@ echo "after";
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js"></script>
+    <script src="assets/js/light-bootstrap-dashboard.js"></script>
 
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="assets/js/demo.js"></script>
 
-	
+    
 
-	<script type="text/javascript">
-    	$(document).ready(function(){
+    <script type="text/javascript">
+        $(document).ready(function(){
 
-        	demo.initChartist();
+            demo.initChartist();
 
-        	$.notify({
-            	icon: 'pe-7s-gift',
-            	message: "Welcome to your personalized Dashboard, helping you track your project progress."
+            $.notify({
+                icon: 'pe-7s-gift',
+                message: "Welcome to your personalized Dashboard, helping you track your project progress."
 
             },{
                 type: 'info',
                 timer: 4000
             });
 
-    	});
-	</script>
+        });
+    </script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

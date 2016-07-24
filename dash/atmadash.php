@@ -3,17 +3,17 @@
 <head>
     <style>
      .pieContainer {
-          height: 100px;
+          height: 300px;
      }
      .pieBackground {
           background-color: grey;
           position: absolute;
-          width: 100px;
-          height: 100px;
+          width: 300px;
+          height: 300px;
           -moz-border-radius: 50px;
-          -webkit-border-radius: 50px;
+          -webkit-border-radius: 150px;
           -o-border-radius: 50px;
-          border-radius: 50px;
+          border-radius: 150px;
           -moz-box-shadow: -1px 1px 3px #000;
           -webkit-box-shadow: -1px 1px 3px #000;
           -o-box-shadow: -1px 1px 3px #000;
@@ -45,8 +45,8 @@
 
         // Set chart options
         var options = {'title':'Completion of your Project',
-                       'width':400,
-                       'height':300};
+                       'width':450,
+                       'height':400};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -116,9 +116,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="atmadashboard.php">
                         <i class="pe-7s-graph"></i>
-                        <p>SP of organization</p>
+                        <p>Track Progress</p>
                     </a>
                 </li>
                 <li>
@@ -211,7 +211,7 @@
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">Tasks</h4>
+                                <h4 class="title">Projects and Strategies</h4>
                                 <p class="category">Covering Milestones</p>
                             </div>
                             <div class="content">
@@ -224,7 +224,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td>To write blogs for Network and FB based on research on different topics"</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -240,7 +240,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td>To create a fundraising plan for Urmi Foundation, keeping in mind different sources. This includes research of potential funders.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -256,7 +256,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit</td>
+                                                <td>To create a recruitment plan for Swastik School for Superviser position.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -272,7 +272,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td>Expand the reach of Dream A Dream to 4 cities.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -288,7 +288,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Read "Following makes Medium better"</td>
+                                                <td>Help strategise the placement of students.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -304,7 +304,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td>Boost cultural activities to strengthen the all round development.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -333,29 +333,7 @@
 
 
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2014 Sales</h4>
-                                <p class="category">All products including Taxes</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
-
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
 
                     
 

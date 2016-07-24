@@ -6,7 +6,7 @@ $password = "";
 // Create connection
 //$conn = new mysqli($servername, $username, $password);
 
-$dbname = "test";
+$dbname = "atma";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,17 +15,44 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-if ($_POST) {
-
+$upvotes=0;
+$downvotes=0;
+if (isset($_POST['upvotes']) ) {
+$volunteer_id = $_POST['volunteer_id'];
 $volunteer_name = $_POST['volunteer_name'];
   $project_assigned = $_POST['project_assigned'];
   $feedback = $_POST['feedback'];
-$query = "  INSERT INTO feedback VALUES ('$volunteer_name',
-        '$project_assigned', '$feedback');";
 
+//$upvotes = $upvotes+1;
+    $existing_user = "SELECT count(volunteer_id) FROM feedback WHERE volunteer_id =" + $volunteer_id + ";";
+  mysqli_query($conn,$existing_user);
+
+if($existing_user!=0)
+{
+    $sql = "SELECT count(upvotes) as count1 FROM feedback where  volunteer_id="+$volunteer_id+";";
+//echo $sql;
+
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_row($result); 
+$count = $row[1];
+$upvotes = $count++;
+    $query = "  INSERT INTO feedback VALUES ('$volunteer_id','$volunteer_name','$project_assigned','$upvotes','$downvotes','$feedback');";
+mysqli_query($conn,$query);
+}
+else 
+{
+    $query = "  INSERT INTO feedback VALUES ('$volunteer_id','$volunteer_name','$project_assigned','$upvotes','$downvotes','$feedback');";
   mysqli_query($conn,$query);
+
+}
  // mysqli_query($conn,$sql);
 
+}
+if (isset($_POST['downvotes']) ){
+    $downvotes = $downvotes+1;
+
+$query = "  INSERT INTO feedback VALUES ('$volunteer_id','$volunteer_name','$project_assigned','$upvotes','$downvotes','$feedback');";
+  mysqli_query($conn,$query);
 }
 $conn->close();
 
@@ -63,6 +90,8 @@ $conn->close();
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+<script src="https://use.fontawesome.com/cbad971155.js"></script>
 </head>
 <body>
 
@@ -181,14 +210,14 @@ $conn->close();
                                                 <input type="text" class="form-control" placeholder="Username" value="Atma23">
                                             </div>
                                         </div>
+                                    -->
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" placeholder="Email">
+                                                <label >Volunteer ID</label>
+                                                <input name="volunteer_id" type="text" class="form-control" placeholder="Volunteer ID">
                                             </div>
                                         </div>
-                                    </div> -->
-
+                                    </div> 
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Volunteer Name</label>
@@ -268,8 +297,18 @@ $conn->close();
                                         </div>
                                     </div>
                                     -->
-                                    <button type="submit" class="btn btn-info btn-fill pull-left">Submit Feedback</button>
-		                            <div class="clearfix"></div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <button type="submit" name="upvotes" class="btn btn-info btn-fill pull-left"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Upvote</button>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-md-2">
+
+                                    <button type="submit" name="downvotes" class="btn btn-info btn-fill pull-left"><i class="fa fa-thumbs-down" aria-hidden="true"></i>Downvote</button>
+                                    <div class="clearfix"></div>
+                                        </div>
+
+                                    </div>
                                 </form>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ html, body {
 }
 
 a {
-  color:#F97E76;
+  color:#8463C9;
 }
 
 a:hover {
@@ -59,7 +59,7 @@ hr {
     position: absolute;
     right: 0;
     top: 0;
-    background-color:#444444;
+    background-color:#8463C9;
   /*
     background-image:url('/assets/example/bg_suburb.jpg');
     background-size:cover;
@@ -73,7 +73,7 @@ hr {
 
 .navbar-blue {
     border-width:0;
-	background-color:#F97E76;
+	background-color:#8463C9;
     color:#ffffff;
     font-family:arial,sans-serif;
     top:0;
@@ -89,7 +89,7 @@ hr {
 .navbar-blue .dropdown-menu li > a {padding-left:30px;}
 
 .navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
-   background-color:#F97E76;
+   background-color:#8463C9;
    color:#fff;
 }
 
@@ -116,14 +116,14 @@ hr {
     padding-left:5px;
 }
 #sidebar .nav li>a:hover {
-    background-color:#F97E76;
+    background-color:#8463C9;
 }
 
 .logo {
   display:block;
   padding:3px;
   background-color:#fff;
-  color:#F97E76;
+  color:#8463C9;
   height:28px;
   width:28px;
   margin:9px;
@@ -161,7 +161,7 @@ h1,h2,h3 {
 }
 
 .btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus  {
-	background-color:#F97E76;
+	background-color:#8463C9;
     color:#fffffe;
 }
 .btn-default {
@@ -178,11 +178,11 @@ h1,h2,h3 {
 }
   
 .badge{
-   color:#F97E76;
+   color:#8463C9;
    background-color:#fff;
 }
 .badge:hover, .badge-inverse{
-   background-color:#F97E76;
+   background-color:#8463C9;
    color:#fff;
 }
     
@@ -248,7 +248,7 @@ small.text-muted {
   }
 
   .navbar-blue {
-	background-color:#F97E76;
+	background-color:#8463C9;
     top:0;
     width:100%;
     position:relative;

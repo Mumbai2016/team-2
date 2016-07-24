@@ -238,8 +238,7 @@ $rank++;
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-                </p>
+                    &copy; 2016 <a href="http://www.atma.org.in"> Atma</a></p>
             </div>
         </footer>
 
