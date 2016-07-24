@@ -123,10 +123,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                           <a href="">
-                               Account
-                            </a>
-                        </li>
+                         
                         <li>
                             <a href="/team-2/index.php">
                                 Log out
@@ -293,7 +290,7 @@ $rank++;
 
                    
 
-                                    <button type="submit" name = "submit"class="btn btn-info btn-fill pull-left">Update Profile</button>
+                                    <button type="submit" name = "submit"class="btn btn-info btn-fill pull-left">Send Message</button>
                                 
                                     <div class="clearfix"></div>
                                 </form>
