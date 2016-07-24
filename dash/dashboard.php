@@ -22,19 +22,52 @@
 </style>
 <?php
 session_start();
+error_reporting(0);
 include ('../registrations/database_connection.php');
 $dbc = new mysqli('localhost', 'root', 'root', 'atma');
-$username = $_SESSION['Username'];
-echo "username";
-echo $username;
+$username = 'malabikasen';
+$_SESSION['Username'];
+//echo "username";
+//echo $username;
 
-$query_id = "SELECT email FROM volunteers WHERE username = $username";
+//$query_id = "SELECT `work-hours` FROM `volunteer-workhours` WHERE user_id = 1";
+$query_id = "SELECT `id` FROM `volunteers` WHERE `username` = 'malabikasen'";
 $result_id = mysqli_query($dbc, $query_id);
-echo "result id";
-echo "before";
-echo $result_id;
-echo "after";
+//echo $result_id;
 
+// while($row = mysqli_fetch_array($result_id))
+//   {
+//   echo $row[0] ;
+//   echo "<br>";
+//   }
+$row = mysqli_fetch_row($result_id); 
+//echo "result id";
+//echo "before";
+//echo $result_id;
+$user_id = $row[0];
+//echo $user_id;
+$sql = "SELECT count(user_id) FROM `volunteer-workhours` where `user_id` = $user_id";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_row($result); 
+$count = $row[0];
+//echo $count;
+$var = 0;
+$flagzero = 0;
+$flagone = 0;
+
+    //echo $projectid;
+    //echo '&nbsp';
+    $sql = "SELECT `status` FROM `volunteer-workhours` where `user_id` = $user_id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_row($result); 
+    while($var <= $count) {
+    $id = $row[$var];
+    if($id == 0)
+        $flagzero++;
+    else
+        $flagone++;
+    $var++;
+} 
 
 ?>
 
@@ -59,8 +92,8 @@ echo "after";
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['Complete', complete],
-          ['Remaining', remaining],
+          ['Complete', <?php echo $flagone; ?>],
+          ['Remaining', <?php echo $flagzero; ?>],
         ]);
 
         // Set chart options
@@ -244,7 +277,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td>To write blogs for Network and FB based on research on different topics"</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -260,7 +293,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td>To create a fundraising plan for Urmi Foundation, keeping in mind different sources. This includes research of potential funders.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -276,7 +309,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit</td>
+                                                <td>To create a recruitment plan for Swastik School for Superviser position.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -308,7 +341,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Read "Following makes Medium better"</td>
+                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -324,7 +357,7 @@ echo "after";
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td>Help strategise the placement of students.</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
