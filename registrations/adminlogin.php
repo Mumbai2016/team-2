@@ -109,7 +109,7 @@ $dbc = new mysqli('localhost', 'root', 'root', 'atma');
             $_SESSION = mysqli_fetch_array($result_check_credentials, MYSQLI_ASSOC);//Assign the result of this query to SESSION Global Variable
             
             
-            header("Location:../dash/atmadash.php");
+            header("Location:../dash/atmadashboard.php");
 
 
           }

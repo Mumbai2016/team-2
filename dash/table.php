@@ -146,7 +146,7 @@
 
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = '';
+$dbpass = 'root';
 $db_name = 'atma';
 $tbl_name = 'volunteers';
 

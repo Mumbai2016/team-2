@@ -8,7 +8,7 @@
         <td>Score</td>
     </tr>
 	<?php
-$conn = mysqli_connect("localhost","root","","volunteers");
+$conn = mysqli_connect("localhost","root","root","volunteers");
 #mysqli_select_db($conn,"volunteers");
 
         $result=mysqli_query($conn, "SELECT * FROM leaderboard");

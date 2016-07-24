@@ -175,7 +175,7 @@ $flagone = 0;
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="table.php">
                         <i class="pe-7s-note2"></i>
                         <p>LeaderBoard</p>
                     </a>
@@ -193,7 +193,7 @@ $flagone = 0;
                     </a>
                 </li>-->
                 <li>
-                    <a href="maps.html">
+                    <a href="#">
                         <i class="pe-7s-map-marker"></i>
                         <p>Maps</p>
                     </a>
